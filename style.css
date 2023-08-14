@@ -19,6 +19,12 @@
   --medium-grey: #A7A7A7;
 }
 
+main {
+  display: flex;
+}
+
+/* inputs */
+
 .login {
   width: 100%;
   display: flex;
@@ -27,6 +33,7 @@
   align-items: center;
   flex-direction: column;
   padding: clamp(35px, 8%, 70px);
+  justify-content: space-between;
 }
 
 .login_logo {
@@ -66,6 +73,7 @@
   position: absolute;
   text-transform: uppercase;
   color: var(--medium-grey);
+  transition: all 200ms ease;
 }
 
 .input:focus {
@@ -76,4 +84,128 @@
 .login_label .span_active {
   font-size: 0.7em;
   margin: 8px 10px;
+}
+
+/* botões */
+
+.login_icons {
+  gap: 10px;
+  width: 100%;
+  display: flex;
+  margin-top: 20px;
+}
+
+.login_icons img {
+  width: 20px;
+}
+
+.icons_button {
+  height: 35px;
+  border: none;
+  display: flex;
+  width: 33.33%;
+  cursor: pointer;
+  border-radius: 5px;
+  align-items: center;
+  justify-content: center;
+}
+
+.login_icons .icons_button:nth-child(1) {
+  background-color: var(--blue);
+}
+
+.login_icons .icons_button:nth-child(2) {
+  background-color: var(--light-grey);
+}
+
+.login_icons .icons_button:nth-child(3) {
+  background-color: var(--black);
+}
+
+/* checkbox */
+
+.login_label--checkbox {
+  width: 100%;
+  display: flex;
+  font-weight: 500;
+  font-size: 0.9em;
+  align-items: center;
+  margin: 15px 0 50px;
+}
+
+.input--checkbox {
+  width: 20px;
+  height: 20px;
+  appearance: none;
+  margin-right: 8px;
+  border-radius: 3px;
+  background-color: var(--light-grey);
+}
+
+.input--checkbox:checked {
+  background-color: var(--red);
+}
+
+.input--checkbox:checked::after {
+  content: "";
+  width: 5px;
+  height: 10px;
+  display: block;
+  margin: 2px 6px;
+  border: 3px solid white;
+  border-width: 0 3px 3px 0;
+  transform: rotate(45deg);
+}
+
+.wrapper {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.login__button svg {
+  fill: white;
+} 
+
+.login__button {
+  width: 60px;
+  border: none;
+  height: 60px;
+  display: flex;
+  padding: 20px;
+  cursor: pointer;
+  margin-bottom: 60px;
+  border-radius: 20px;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--red);
+}
+
+.login__button:disabled {
+  cursor: auto;
+  background-color: white;
+  border: 2px solid var(--light-grey);
+}
+
+.login__button:disabled svg {
+  fill: var(--grey);
+}
+
+.login__link {
+  font-weight: 700;
+  font-size: 0.8em;
+  margin-bottom: 5px;
+  text-decoration: none;
+  color: var(--medium-grey);
+  text-transform: uppercase;
+}
+
+.wallpaper {
+  flex: 1;
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+  background-image: url(./imgs/valorant.jpg);
 }
