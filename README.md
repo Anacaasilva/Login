@@ -5,7 +5,7 @@ Tela de login Riot Games, realizada com HTML, CSS e JS.
 
 <p align="center">
   <h2>🏠 Home </h2>
-  <img src="/imgs/loginRiot.png>
+  <img src="../loginRiot.png">
 </p>
 
 ## 🚀 Tecnologias
